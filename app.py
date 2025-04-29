@@ -14,11 +14,12 @@ def page_unavailable(error):
 '''
 
 @app.route('/')
-def home():
+def homepage():
     return render_template('home.html')
 
-# @app.route('/')
-# def ():
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 # DEBUG!!
 '''
