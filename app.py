@@ -21,8 +21,13 @@ def homepage():
 def about():
     return render_template('about.html')
 
-# DEBUG!!
-'''
-if __name__ == "__main__":
-    app.run(debug=True)
-'''
+@app.route('/products')
+def products():
+    return render_template('products.html')
+
+""" 
+TODO: 
+- Facebook fetcher
+- Add favicon https://www.w3schools.com/howto/howto_html_favicon.asp#:~:text=A%20favicon%20is%20a%20small,simple%20image%20with%20high%20contrast.
+- Refine pages
+"""

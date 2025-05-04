@@ -7,9 +7,10 @@
 
 <!-- Actual page -->
 <body>
-    <h1>Testing the server!</h1>
+    <h1>Scott's Variety Shop</h1>
     <nav>
         <a href="{{ url_for('homepage') }}">Home</a>
+        <a href="{{ url_for('products') }}">Products</a>
         <a href="{{ url_for('about') }}">About</a>
     </nav>
     {% block content %}
