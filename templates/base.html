@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Scott's Variety Shop</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <!-- Actual page -->
 <body>
     <div id="navbar">
+        <p>Scott's Variety Shop</p>
         <nav>
             <a href="{{ url_for('homepage') }}">Home</a>
             <a href="{{ url_for('products') }}">Products</a>
@@ -16,8 +18,10 @@
         </nav>
     </div>
     <div id="photo-banner"></div>
-    <h1>Scott's Variety Shop</h1>
-    {% block content %}
-    {% endblock %}
+
+    <div id="content-wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
 </html>

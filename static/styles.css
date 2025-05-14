@@ -1,21 +1,36 @@
-* {
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+}
+
+#content-wrapper {
+    margin: 20px;
+    padding: 0;
 }
 
 #navbar {
     background-color: #1c55ff; 
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: flex-start; 
+    align-items: center;
+}
+
+#navbar p {
+    color: white; 
+    text-decoration: none;
+    margin-left: 25px;
+    margin-right: 75px; 
+    font-size: 24px;
+    font-family: fantasy;
 }
 
 #navbar nav a {
     color: white; 
     text-decoration: none;
-    margin-right: 15px; 
-    font-size: 16px;
+    margin-right: 40px; 
+    font-size: 20px;
 }
 
 #navbar nav a:hover {
@@ -28,4 +43,9 @@
     background-image: url('/static/photos/show.jpg'); 
     background-size: cover;
     background-position: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 0; 
 }
