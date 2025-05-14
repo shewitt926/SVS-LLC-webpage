@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    background-color: #1c55ff; 
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start; 
+}
+
+#navbar nav a {
+    color: white; 
+    text-decoration: none;
+    margin-right: 15px; 
+    font-size: 16px;
+}
+
+#navbar nav a:hover {
+    text-decoration: underline; 
+}
+
+#photo-banner {
+    width: 100%;
+    height: 300px; 
+    background-image: url('/static/photos/show.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
