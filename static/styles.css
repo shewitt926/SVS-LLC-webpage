@@ -13,11 +13,37 @@ html, body {
     background-color: #1c55ff; 
     padding: 15px;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: space-between;
     align-items: center;
 }
 
-#navbar p {
+#navbar-main {
+    display: flex;
+    align-items: center;
+}
+
+#login {
+    background-color: #fff;
+    color: #1c55ff; 
+    border: 2.5px solid #1c55ff; 
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(28, 85, 255, 0.10);
+    margin-left: 0;
+}
+
+#login:hover {
+    background-color: #1c55ff;
+    color: #fff; 
+    box-shadow: 0 4px 16px rgba(28, 85, 255, 0.15);
+}
+
+#navbar-main p {
     color: white; 
     text-decoration: none;
     margin-left: 25px;
@@ -26,14 +52,14 @@ html, body {
     font-family: fantasy;
 }
 
-#navbar nav a {
+#navbar-main nav a {
     color: white; 
     text-decoration: none;
     margin-right: 40px; 
     font-size: 20px;
 }
 
-#navbar nav a:hover {
+#navbar-main nav a:hover {
     text-decoration: underline; 
 }
 

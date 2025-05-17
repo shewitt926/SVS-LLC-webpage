@@ -10,13 +10,17 @@
 <!-- Actual page -->
 <body>
     <div id="navbar">
-        <p>Scott's Variety Shop</p>
-        <nav>
-            <a href="{{ url_for('homepage') }}">Home</a>
-            <a href="{{ url_for('products') }}">Products</a>
-            <a href="{{ url_for('about') }}">About</a>
-        </nav>
+        <div id="navbar-main">
+            <p>Scott's Variety Shop</p>
+            <nav>
+                <a href="{{ url_for('homepage') }}">Home</a>
+                <a href="{{ url_for('products') }}">Products</a>
+                <a href="{{ url_for('about') }}">About</a>
+            </nav>
+        </div>
+        <a href="{{ url_for('login') }}" id="login">Login</a>
     </div>
+    
     <div id="photo-banner"></div>
 
     <div id="content-wrapper">

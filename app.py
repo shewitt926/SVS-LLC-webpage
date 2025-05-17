@@ -24,6 +24,10 @@ def about():
 def products():
     return render_template('products.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 """ 
 TODO: 
 - Facebook fetcher
