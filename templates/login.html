@@ -1,4 +1,28 @@
-<!DOCTYPE html>
-<body>
-    login? not yet!
-</body>
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    h1 {
+        text-align: center;
+    }
+    #user_in {
+        text-align: center;
+
+    }
+</style>
+
+<h1>Welcome back!</h1>
+<div id="user_in">
+    <input type="text" name="Username"
+            placeholder="Username"></input>
+
+    <br><br>
+
+    <input type="text" name="Password"
+            placeholder="Password"></input>
+    
+    <br><br>
+
+    <button type="submit">Login</button>
+</div>
+{% endblock %}

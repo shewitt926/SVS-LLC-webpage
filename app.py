@@ -1,6 +1,17 @@
 from flask import Flask, render_template, abort, request, url_for, flash, redirect
+from flask_login import LoginManager
 
 app = Flask(__name__)
+
+'''
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.get(user_id) # Fetch user from database
+'''
 
 @app.errorhandler(404)
 def page_not_found(error):
