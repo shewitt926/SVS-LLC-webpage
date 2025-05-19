@@ -7,22 +7,34 @@
     }
     #user_in {
         text-align: center;
-
+    }
+    .flash-message {
+        color: red;
+        text-align: center;
+        margin-bottom: 10px;
     }
 </style>
 
 <h1>Welcome back!</h1>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="flashes">
+      {% for message in messages %}
+        <div class="flash-message">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
 <div id="user_in">
-    <input type="text" name="Username"
-            placeholder="Username"></input>
-
-    <br><br>
-
-    <input type="text" name="Password"
-            placeholder="Password"></input>
-    
-    <br><br>
-
-    <button type="submit">Login</button>
+    <form method="POST" action="{{ url_for('login') }}">
+        <input type="text" name="Username" placeholder="Username" required>
+        <br><br>
+        <input type="password" name="Password" placeholder="Password" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
 </div>
+
 {% endblock %}
