@@ -1,9 +1,14 @@
 from flask import Flask, render_template, abort, request, url_for, flash, redirect, jsonify
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
-import os
 
 app = Flask(__name__)
-app.secret_key = open('secret_key.txt', 'r')  # Needed for session management
+
+# grabbing key from file was acting stupid...this fixes it,
+# as it was expecting bytes and not reading straight from the file
+with open('secret_key.txt', 'rb') as file:
+    myKey = file.read()
+
+app.secret_key = myKey  
 
 login_manager = LoginManager()
 login_manager.init_app(app)
