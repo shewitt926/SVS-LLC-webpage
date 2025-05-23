@@ -25,7 +25,13 @@ def load_user(user_id):
 # wanna see the webpage? well here is all there is.
 @app.route('/')
 def homepage():
-    return render_template('home.html')
+    # Placeholder for products, replace with DB query later
+    products = [
+        {'name': 'Product 1', 'image': 'static/photos/products/', 'description': 'Description 1'},
+        {'name': 'Product 2', 'image': 'static/photos/products/', 'description': 'Description 2'},
+        {'name': 'Product 3', 'image': 'static/photos/products/', 'description': 'Description 3'},
+    ]
+    return render_template('home.html', products=products)
 
 @app.route('/about')
 def about():
