@@ -1,8 +1,9 @@
-from flask import Flask, render_template, abort, request, url_for, flash, redirect
+from flask import Flask, render_template, abort, request, url_for, flash, redirect, jsonify
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+import os
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Needed for session management
+app.secret_key = open('secret_key.txt', 'r')  # Needed for session management
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -21,7 +22,7 @@ def load_user(user_id):
         return User(user_id)
     return None
 
-# wanna see the webpage?
+# wanna see the webpage? well here is all there is.
 @app.route('/')
 def homepage():
     return render_template('home.html')
