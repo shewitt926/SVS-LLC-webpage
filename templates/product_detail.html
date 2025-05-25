@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+    .layout img {
+        width: 500px;
+        height: auto;
+        border-radius: 8px;
+    }
+    .text {
+        flex: 1;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+    }
+</style>
+
+<a href="{{ url_for('products') }}">Back to Products</a>
+
+<div class="layout">
+    <h1>{{ product['_name'] }}</h1>
+    <img src="{{ url_for('product_image', product_id=product['id']) }}" alt="{{ product['_name'] }}" style="max-width:300px;">
+    <p>${{ product['_price'] }}</p>
+    
+    <!-- Add more product info here as needed -->
+</div>
+
+{% endblock %}

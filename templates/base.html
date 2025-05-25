@@ -18,7 +18,11 @@
                 <a href="{{ url_for('about') }}">About</a>
             </nav>
         </div>
-        <a href="{% if current_user.is_authenticated %}{{ url_for('logout') }}{% else %}{{ url_for('login') }}{% endif %}" id="login">
+        <a href="{% if current_user.is_authenticated %}
+        {{ url_for('logout') }}
+        {% else %}
+        {{ url_for('login') }}
+        {% endif %}" id="login">
             {% if current_user.is_authenticated %}
                 {{ current_user.id }} - Logout
             {% else %}
