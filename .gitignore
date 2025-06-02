@@ -1,0 +1,3 @@
+*.db
+*.json
+secret_key.txt

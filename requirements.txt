@@ -1,5 +1,3 @@
 flask-login
 flask
 sqlite3
-io
-urllib.parse

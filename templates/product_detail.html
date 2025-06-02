@@ -9,25 +9,28 @@
         padding: 20px;
     }
     .layout img {
-        width: 500px;
+        width: 400px;
         height: auto;
         border-radius: 8px;
+        align-items: left;
     }
-    .text {
-        flex: 1;
-        font-family: Arial, sans-serif;
-        font-size: 24px;
+    .prod-text {
+        text-align: left;
+    }
+    #price-tag {
+        color: green;
     }
 </style>
 
-<a href="{{ url_for('products') }}">Back to Products</a>
+<a href="{{ url_for('products') }}" class="back-button">Back to Products</a>
 
 <div class="layout">
-    <h1>{{ product['_name'] }}</h1>
-    <img src="{{ url_for('product_image', product_id=product['id']) }}" alt="{{ product['_name'] }}" style="max-width:300px;">
-    <p>${{ product['_price'] }}</p>
-    
-    <!-- Add more product info here as needed -->
+    <img src="{{ url_for('product_image', product_id=product['id']) }}" alt="{{ product['_name'] }}">
+    <div class="prod-text">
+        <h1>{{ product['_name'] }}</h1>
+        <h1 id="price-tag">${{ product['_price'] }}</h1>
+        <p>{{ product['_description'] }}</p>
+    </div>
 </div>
 
 {% endblock %}

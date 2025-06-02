@@ -4,6 +4,6 @@ CREATE TABLE products (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     _name TEXT NOT NULL,
     _price INTEGER NOT NULL,
-    _description TEXT,
+    _description TEXT NOT NULL,
     _image BLOB
 );

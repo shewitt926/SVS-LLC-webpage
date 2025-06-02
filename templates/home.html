@@ -64,7 +64,7 @@
     {% for product in products %}
     <div class="slide{% if loop.first %} active{% endif %}">
         <img src="{{ product.image }}" alt="{{ product.name }}">
-        <div>{{ product.name }} - {{ product.description }}</div>
+        <div>{{ product.name }} - {{ product.price }}</div>
     </div>
     {% endfor %}
     <!-- Arrows -->

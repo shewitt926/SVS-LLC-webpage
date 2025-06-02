@@ -75,3 +75,18 @@ body {
     font-family: Arial, sans-serif;
     padding-top: 0; 
 }
+
+.back-button {
+    background-color: #1c55ff;
+    color: #fff;
+    border: 2.5px solid #1c55ff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(28, 85, 255, 0.10);
+    margin-bottom: 20px;
+    display: inline-block;
+}
